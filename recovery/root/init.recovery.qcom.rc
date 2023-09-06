@@ -72,3 +72,8 @@ on boot
     start vendor.qti.vibrator
     setprop sys.usb.config adb
 
+on property:sys.listeners.registered=true
+    start keymaster-4-0-qti
+
+on property:vendor.sys.listeners.registered=true
+    start keymaster-4-0-qti
